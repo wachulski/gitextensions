@@ -25,7 +25,12 @@ if ($startSonar) {
         /d:"sonar.c.file.suffixes=-" `
         /d:"sonar.cpp.file.suffixes=-" `
         /d:"sonar.objc.file.suffixes=-" `
-        /d:"sonar.cs.opencover.reportsPaths=../OpenCover.GitExtensions.xml"
+        /d:"sonar.cs.opencover.reportsPaths=../OpenCover.GitExtensions.xml" `
+        /d:"sonar.pullrequest.provider=github" `
+        /d:"sonar.pullrequest.github.repository=$env:APPVEYOR_PROJECT_SLUG" `
+        /d:"sonar.pullrequest.branch=$env:APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH" `
+        /d:"sonar.pullrequest.key=$env:APPVEYOR_PULL_REQUEST_NUMBER" `
+        /d:"sonar.pullrequest.base=$env:APPVEYOR_REPO_BRANCH"
 
     Write-Host "SonarQube analysis initialized. Awaiting MSBuild..."
 }

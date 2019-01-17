@@ -328,5 +328,17 @@ namespace GitCommands
                 yield return path.EnsureTrailingPathSeparator();
             }
         }
+
+        public static void NotUsedIntentionally(string password)
+        {
+            try
+            {
+                return;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

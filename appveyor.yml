@@ -30,7 +30,7 @@ cache:
   - packages\WiX.3.11.0 -> Setup\packages.config
 
 init:
-- ps: $env:enableCodeQualityAnalysis = $env:APPVEYOR_REPO_BRANCH -eq 'master';
+- ps: $env:enableCodeQualityAnalysis = $env:APPVEYOR_REPO_BRANCH -eq 'master' -or $env:APPVEYOR_PULL_REQUEST_TITLE;
 
 install:
 - ps: if ($env:enableCodeQualityAnalysis) { cinst sonarscanner-msbuild-net46 }
