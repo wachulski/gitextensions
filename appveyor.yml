@@ -73,6 +73,7 @@ test_script:
     &$codecov -f ".\OpenCover.GitExtensions.xml" --flag tests
 
 
+
 # here we are going to override common configuration
 for:
 
@@ -112,6 +113,7 @@ for:
     - path: 'Setup/GitExtensions-Portable-*.zip'
     - path: 'Setup/GitExtensions-pdbs-*.zip'
     - path: 'GitExtensionsVSIX/bin/Release/GitExtensionsVSIX.vsix'
+    - path: 'OpenCover.GitExtensions.xml'
 
 # configuration for release branches ONLY
 -
