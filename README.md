@@ -1,4 +1,5 @@
 ![Git Extensions logo](https://cdn.rawgit.com/gitextensions/gitextensions/master/Logo/git-extensions-logo.svg)
+[![Coverage Status](https://coveralls.io/repos/github/codeconditioner/gitextensions/badge.svg?branch=master)](https://coveralls.io/github/codeconditioner/gitextensions?branch=master)
 
 # Git Extensions
 
